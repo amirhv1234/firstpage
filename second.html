@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+<style>
+body{
+  background-image:url("https://www.wellesley.edu/sites/default/files/styles/news_refresh_hero/public/assets/dailyshot/ds_461390782.jpg?itok=jr0Buv1t");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} 
+
+#div{
+    margin-top: 400px ;
+    margin-left: 450px;
+  
+    
+}
+#val1{
+    border-radius: 300px;
+    height: 50px;
+    width: 300px;
+   background-color: rgb(60, 7, 73);
+   color: wheat;
+   font-size: 20PX;
+   
+    
+}
+#op{
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    font-size:20px ;
+}
+
+#val2{
+    border-radius: 300px;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(60, 7, 73);
+    color: wheat;
+    font-size: 20PX;
+}
+#result{
+    color: blue;
+    font-size: 80px;
+    border-radius: 50px;
+    background-color:  hsla(0, 0%,80%, .5);
+   
+    text-align: center;
+    
+}
+
+
+
+#button{
+    margin-top: 20px ;
+    margin-left: 290px;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: burlywood;
+
+    color: blue;
+}
+
+}
+  </style>
+   
+
+
+    <script>
+        var num = prompt('please enter your first name');
+        if (num == 'mahdieh') {
+            alert("welcome miss ahmadi");
+            function cal(){
+                var val1 = document.getElementById("val1").value;
+                var op = document.getElementById("op").value;
+                var val2 = document.getElementById("val2").value;
+
+                var val1 = val1*1;
+                var val2 = val2*1;
+                if(op == "+"){
+                document.getElementById("result").innerHTML= (val1+val2);
+
+                }else if (op == "-"){
+                    document.getElementById("result").innerHTML= (val1-val2);
+                }else if( op == "*"){
+                    document.getElementById("result").innerHTML= (val1*val2);
+        
+                }else if(op == "/"){
+                    document.getElementById("result").innerHTML= (val1/val2);
+                }else if(op == "**"){
+                    document.getElementById("result").innerHTML= (val1**val2);
+                }
+               
+
+            }    
+        }else{
+            alert("خره اسمو اشتباه زدی")
+        }
+        
+          
+    </script> 
+    </head>
+    <body>
+     <div id='div'>  
+    <input type="number" placeholder=" enter number1" id="val1"> 
+    <select id="op" > 
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>**</option>
+        
+    </select>
+   
+    <input type="number" placeholder="enter number2" id="val2"></br>
+    <button onclick="cal()" id ='button'> calculator</button>   
+</div>
+<h1 id="result"  ></h1>
+
+
+   
+
+    
+</body>
+</html>
